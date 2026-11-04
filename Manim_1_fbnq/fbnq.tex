@@ -1,0 +1,97 @@
+\documentclass[12pt,a4paper]{ctexart}
+\usepackage{amsmath,amssymb}
+\usepackage{geometry}
+\geometry{left=2.5cm,right=2.5cm,top=2cm,bottom=2cm}
+
+\begin{document}
+
+\title{用高中数列方法推导斐波那契数列通项公式}
+\author{}
+\date{}
+\maketitle
+
+\noindent
+已知斐波那契数列满足：
+\[
+F_0=0,\quad F_1=1,\qquad F_{n+2}=F_{n+1}+F_n\ (n\geq 0).
+\]
+求通项公式 $F_n$。
+
+\section*{第一步：构造等比数列}
+我们希望将二阶递推转化为一阶递推，设存在常数 $\alpha,\beta$ 使得
+\[
+F_{n+2}-\alpha F_{n+1}=\beta\big(F_{n+1}-\alpha F_n\big).
+\]
+展开右边并整理：
+\[
+F_{n+2}=(\alpha+\beta)F_{n+1}-\alpha\beta F_n.
+\]
+与原递推 $F_{n+2}=F_{n+1}+F_n$ 比较系数，可得
+\[
+\alpha+\beta=1,\qquad \alpha\beta=-1.
+\]
+由韦达定理，$\alpha,\beta$ 是下列一元二次方程的两个根：
+\begin{equation}\label{eq:char}
+x^2-x-1=0.
+\end{equation}
+方程~\eqref{eq:char} 称为该递推的\textbf{特征方程}。
+
+\section*{第二步：求出 $\alpha$ 和 $\beta$}
+解特征方程得
+\[
+\alpha=\frac{1+\sqrt5}{2},\qquad \beta=\frac{1-\sqrt5}{2}.
+\]
+容易验证它们满足
+\[
+\alpha+\beta=1,\quad \alpha\beta=-1,\quad \alpha-\beta=\sqrt5.
+\]
+这里 $\alpha$ 就是黄金分割比 $\phi\approx1.618$，$\beta=-1/\phi\approx-0.618$。
+
+\section*{第三步：得到两个等比数列}
+由第一步的构造，
+\begin{align*}
+F_{n+2}-\alpha F_{n+1} &= \beta\,(F_{n+1}-\alpha F_n),\\
+F_{n+2}-\beta F_{n+1} &= \alpha\,(F_{n+1}-\beta F_n).
+\end{align*}
+因此 $\{F_{n+1}-\alpha F_n\}$ 是以 $\beta$ 为公比的等比数列，$\{F_{n+1}-\beta F_n\}$ 是以 $\alpha$ 为公比的等比数列。
+
+利用初值 $F_0=0,F_1=1$，写出通项：
+\begin{align*}
+F_{n+1}-\alpha F_n &= \beta^{\,n}\,(F_1-\alpha F_0)=\beta^{\,n},\\
+F_{n+1}-\beta F_n &= \alpha^{\,n}\,(F_1-\beta F_0)=\alpha^{\,n}.
+\end{align*}
+于是得到关于 $F_{n+1},F_n$ 的线性方程组：
+\begin{equation}\label{eq:sys}
+\begin{cases}
+F_{n+1}-\alpha F_n = \beta^{\,n},\\[4pt]
+F_{n+1}-\beta F_n = \alpha^{\,n}.
+\end{cases}
+\end{equation}
+
+\section*{第四步：消元求通项}
+将方程组~\eqref{eq:sys} 的两式相减：
+\[
+(\beta-\alpha)F_n = \beta^{\,n} - \alpha^{\,n}.
+\]
+由于 $\alpha-\beta=\sqrt5$，即 $\beta-\alpha=-\sqrt5$，代入得
+\[
+-\sqrt5\,F_n = \beta^{\,n} - \alpha^{\,n}
+\quad\Longrightarrow\quad
+F_n = \frac{\alpha^{\,n} - \beta^{\,n}}{\sqrt5}.
+\]
+最后将 $\alpha=\dfrac{1+\sqrt5}{2},\ \beta=\dfrac{1-\sqrt5}{2}$ 代入，即得著名的\textbf{比内公式}：
+\[
+\boxed{F_n = \frac{1}{\sqrt5}\left[\left(\frac{1+\sqrt5}{2}\right)^{\!n} - \left(\frac{1-\sqrt5}{2}\right)^{\!n}\right]}.
+\]
+
+\section*{方法总结}
+整个过程的核心是：
+\begin{enumerate}
+  \item 通过待定系数 $F_{n+2}-\alpha F_{n+1}=\beta(F_{n+1}-\alpha F_n)$ 将二阶递推化为一阶；
+  \item 比较系数得特征方程 $x^2-x-1=0$，求出 $\alpha,\beta$；
+  \item 利用等比数列通项写出两个等式；
+  \item 联立消去 $F_{n+1}$ 即得 $F_n$ 的通项公式。
+\end{enumerate}
+这一方法完全属于高中数学“数列”一章的范畴，无需借助生成函数或矩阵知识。
+
+\end{document}
