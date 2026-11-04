@@ -1,0 +1,47 @@
+{
+  "video": "D:\\2026 Learning\\bilibili\\Manim\\Manim_8_tezhengzhi\\media\\videos\\Eigenvalues_manim\\480p30\\EigenvaluesAndEigenvectors.mp4",
+  "duration": 191.4,
+  "timeline_duration": 191.39999999999716,
+  "cues": 28,
+  "subtitles": 43,
+  "eigenvector_scales": [
+    {
+      "kind": "eigenvector_motion_start",
+      "time": 137.49999999999818,
+      "index": 1,
+      "unit": 0.5,
+      "origin": [
+        -2.600000000000001,
+        -0.6499999999999999,
+        0.0
+      ],
+      "start": [
+        1,
+        1
+      ],
+      "end": [
+        4,
+        4
+      ]
+    },
+    {
+      "kind": "eigenvector_motion_start",
+      "time": 149.49999999999787,
+      "index": 2,
+      "unit": 0.5,
+      "origin": [
+        -2.600000000000001,
+        -0.6499999999999999,
+        0.0
+      ],
+      "start": [
+        -1,
+        1
+      ],
+      "end": [
+        -6,
+        6
+      ]
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "video": "D:\\2026 Learning\\bilibili\\Manim\\Manim_8_tezhengzhi\\media\\videos\\Eigenvalues_manim\\1080p30\\EigenvaluesAndEigenvectors.mp4",
+  "codec": "h264",
+  "resolution": [
+    1920,
+    1080
+  ],
+  "fps": 30.0,
+  "frames": 5742,
+  "duration": 191.4,
+  "timeline_duration": 191.39999999999716,
+  "narration_sections": 28,
+  "subtitles": 43,
+  "same_origin": [
+    -2.600000000000001,
+    -0.6499999999999999,
+    0.0
+  ],
+  "same_coordinate_unit": 0.5,
+  "motion_subtitle_sync": "passed",
+  "audio_tracks": 0,
+  "chapter10_title": "B在两个特征方向上的作用",
+  "keyframes_reviewed": 28
+}
