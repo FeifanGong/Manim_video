@@ -1,0 +1,245 @@
+\documentclass[12pt,a4paper]{ctexart}
+
+\usepackage{amsmath,amssymb}
+\usepackage{geometry}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+
+\geometry{margin=2.5cm}
+\linespread{1.15}
+\setlength{\parskip}{0.45em}
+
+\title{用仿射变换理解椭圆}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section*{核心想法}
+
+椭圆可以看成一个圆被“拉伸”后的结果。更具体地说，如果把单位圆
+\[
+x^2+y^2=1
+\]
+上的每个点都做同一个变换
+\[
+\begin{cases}
+X=ax,\\
+Y=by,
+\end{cases}
+\qquad a>0,\;b>0,
+\]
+那么横坐标被放大 $a$ 倍，纵坐标被放大 $b$ 倍。这个变换就叫作一种仿射变换。
+
+它的直观效果很简单：
+\begin{itemize}
+  \item 横向拉伸得多一些，图形就会变宽；
+  \item 纵向拉伸得多一些，图形就会变高；
+  \item 直线仍然变成直线，平行关系也仍然保留。
+\end{itemize}
+
+因此，仿射变换可以把圆变成椭圆，同时又保留许多“直线型”的几何性质。
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[>=Latex, every node/.style={font=\small}]
+  \begin{scope}
+    \draw[->] (-1.55,0) -- (1.65,0) node[right] {$x$};
+    \draw[->] (0,-1.35) -- (0,1.45) node[above] {$y$};
+    \draw[thick,blue] (0,0) circle (1);
+    \coordinate (P) at (0.64,0.77);
+    \fill[blue] (P) circle (1.5pt) node[above right] {$P(x,y)$};
+    \draw[dashed] (P) -- (0.64,0) node[below] {$x$};
+    \draw[dashed] (P) -- (0,0.77) node[left] {$y$};
+    \node[below] at (0,-1.55) {单位圆 $x^2+y^2=1$};
+  \end{scope}
+
+  \draw[very thick,->] (2.05,0) -- (3.35,0)
+    node[midway,above] {$X=ax,\;Y=by$};
+  \node[align=center] at (2.70,-0.45) {横向放大 $a$ 倍\\纵向放大 $b$ 倍};
+
+  \begin{scope}[xshift=5.35cm]
+    \def\a{1.65}
+    \def\b{0.95}
+    \draw[->] (-2.05,0) -- (2.25,0) node[right] {$X$};
+    \draw[->] (0,-1.35) -- (0,1.45) node[above] {$Y$};
+    \draw[thick,red] (0,0) ellipse ({\a} and {\b});
+    \coordinate (Q) at ({0.64*\a},{0.77*\b});
+    \fill[red] (Q) circle (1.5pt) node[above right] {$P'(X,Y)$};
+    \draw[dashed] (Q) -- ({0.64*\a},0) node[below] {$X=ax$};
+    \draw[dashed] (Q) -- (0,{0.77*\b}) node[left] {$Y=by$};
+    \node[below] at (0,-1.55) {椭圆 $\dfrac{X^2}{a^2}+\dfrac{Y^2}{b^2}=1$};
+  \end{scope}
+\end{tikzpicture}
+\caption{单位圆经过横向、纵向不同倍数的伸缩后，变成椭圆。图中的点 $P(x,y)$ 被送到 $P'(ax,by)$。}
+\end{figure}
+
+\section*{圆为什么会变成椭圆}
+
+从变换公式
+\[
+X=ax,\qquad Y=by
+\]
+出发，可以反过来写成
+\[
+x=\frac{X}{a},\qquad y=\frac{Y}{b}.
+\]
+
+原来的点在单位圆上，所以满足
+\[
+x^2+y^2=1.
+\]
+把 $x=\dfrac{X}{a}$、$y=\dfrac{Y}{b}$ 代进去，就得到
+\[
+\left(\frac{X}{a}\right)^2+\left(\frac{Y}{b}\right)^2=1,
+\]
+也就是
+\[
+\frac{X^2}{a^2}+\frac{Y^2}{b^2}=1.
+\]
+
+这正是椭圆的标准方程。换句话说，椭圆不是凭空出现的，它就是单位圆在横向和纵向被不同程度拉伸后的样子。当 $a=b$ 时，两个方向拉伸程度相同，图形仍然是圆。
+
+\section*{斜率会怎样变化}
+
+仿射变换最有用的地方，是它能把圆上的性质搬到椭圆上。这里最关键的一步，是弄清楚斜率如何变化。
+
+设圆上两点之间的横坐标差为 $\Delta x$，纵坐标差为 $\Delta y$。它们连线的斜率是
+\[
+k=\frac{\Delta y}{\Delta x}.
+\]
+
+经过变换后，横坐标差变为
+\[
+\Delta X=a\Delta x,
+\]
+纵坐标差变为
+\[
+\Delta Y=b\Delta y.
+\]
+所以新图形中对应直线的斜率是
+\[
+k'=\frac{\Delta Y}{\Delta X}
+  =\frac{b\Delta y}{a\Delta x}
+  =\frac{b}{a}k.
+\]
+
+因此可以记住一句话：
+\[
+\boxed{\text{仿射变换 }X=ax,\;Y=by\text{ 会把斜率乘上 }\frac{b}{a}.}
+\]
+
+如果 $a>b$，横向拉伸更明显，同一条线看起来会更“平”；如果 $b>a$，纵向拉伸更明显，同一条线看起来会更“陡”。
+
+\section*{用圆理解椭圆的斜率定义}
+
+在单位圆中，取两个端点
+\[
+A(-1,0),\qquad B(1,0).
+\]
+对于圆上任意一点 $P(x,y)$，只要 $P$ 不是 $A$ 或 $B$，由“直径所对的圆周角是直角”可知，$PA$ 与 $PB$ 互相垂直。
+
+两条直线互相垂直时，斜率乘积为 $-1$。直接用坐标也能看出来：
+\[
+k_{PA}\cdot k_{PB}
+=\frac{y}{x+1}\cdot\frac{y}{x-1}
+=\frac{y^2}{x^2-1}
+=-1.
+\]
+
+现在把圆拉伸成椭圆。端点 $A,B$ 分别变成
+\[
+A'(-a,0),\qquad B'(a,0),
+\]
+点 $P$ 变成 $P'(X,Y)$。因为每条直线的斜率都乘上 $\dfrac{b}{a}$，所以
+\[
+k_{P'A'}=\frac{b}{a}k_{PA},\qquad
+k_{P'B'}=\frac{b}{a}k_{PB}.
+\]
+于是
+\[
+k_{P'A'}\cdot k_{P'B'}
+=\left(\frac{b}{a}\right)^2(k_{PA}\cdot k_{PB})
+=-\frac{b^2}{a^2}.
+\]
+
+这说明，椭圆上的点 $P'$ 到左右两个顶点 $A'(-a,0)$、$B'(a,0)$ 的连线斜率乘积是一个定值：
+\[
+\boxed{k_{P'A'}\cdot k_{P'B'}=-\frac{b^2}{a^2}.}
+\]
+
+反过来也成立。若一个点 $(X,Y)$ 满足
+\[
+\frac{Y}{X+a}\cdot\frac{Y}{X-a}=-\frac{b^2}{a^2},
+\]
+则
+\[
+\frac{Y^2}{X^2-a^2}=-\frac{b^2}{a^2}.
+\]
+整理得
+\[
+b^2X^2+a^2Y^2=a^2b^2,
+\]
+也就是
+\[
+\frac{X^2}{a^2}+\frac{Y^2}{b^2}=1.
+\]
+
+所以，这个“斜率乘积为定值”的性质确实刻画了椭圆。通常说椭圆的这一定义时，会暂时排除左右顶点，因为在顶点处有一条连线的斜率不存在；最后再把两个顶点补上即可。
+
+\section*{中点弦结论也来自圆}
+
+圆还有一个很熟悉的性质：垂径定理。它说，圆心到弦中点的连线垂直于这条弦。
+
+设单位圆中的一条弦为 $A_1B_1$，其中点为 $M_1$。那么
+\[
+OM_1\perp A_1B_1,
+\]
+因此
+\[
+k_{OM_1}\cdot k_{A_1B_1}=-1.
+\]
+
+把整个图形做同样的仿射变换后，弦 $A_1B_1$ 变成椭圆中的弦 $AB$，中点 $M_1$ 变成 $M$。设
+\[
+k_1=\text{弦 }AB\text{ 的斜率},\qquad
+k_2=\text{直线 }OM\text{ 的斜率}.
+\]
+
+由于斜率都乘上 $\dfrac{b}{a}$，所以
+\[
+k_1=\frac{b}{a}k_{A_1B_1},\qquad
+k_2=\frac{b}{a}k_{OM_1}.
+\]
+于是
+\[
+k_1k_2
+=\left(\frac{b}{a}\right)^2
+  \bigl(k_{A_1B_1}\cdot k_{OM_1}\bigr)
+=-\frac{b^2}{a^2}.
+\]
+
+这就得到椭圆中点弦的常用结论：
+\[
+\boxed{k_1k_2=-\frac{b^2}{a^2}.}
+\]
+
+它的意思是：椭圆中一条弦的斜率，与“椭圆中心到这条弦中点的连线”的斜率，乘积恒为 $-\dfrac{b^2}{a^2}$。从仿射变换的角度看，这只是圆中垂径定理被横向、纵向拉伸后的版本。
+
+\section*{小结}
+
+本文只用一个核心变换
+\[
+(x,y)\longmapsto (X,Y)=(ax,by)
+\]
+就把三个事实串了起来：
+\begin{itemize}
+  \item 单位圆会变成椭圆；
+  \item 斜率会统一乘上 $\dfrac{b}{a}$；
+  \item 圆中的直角关系和垂径定理，会变成椭圆中的斜率乘积关系。
+\end{itemize}
+
+这样看椭圆，许多公式就不再只是代数计算，而是可以从圆的几何图像自然地“拉伸”出来。
+
+\end{document}
