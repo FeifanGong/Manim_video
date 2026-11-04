@@ -1,0 +1,436 @@
+{
+  "scene": "CauchyEllipseTangent",
+  "duration": 139.9666666666666,
+  "chapters": [
+    {
+      "title": "开场",
+      "start": 0.0
+    },
+    {
+      "title": "先写出一条候选直线",
+      "start": 7.666666666666666
+    },
+    {
+      "title": "柯西不等式：给出全局上界",
+      "start": 22.96666666666667
+    },
+    {
+      "title": "上界的几何意义：整条椭圆在同侧",
+      "start": 52.13333333333334
+    },
+    {
+      "title": "取等条件：公共点只能是 P",
+      "start": 77.96666666666665
+    },
+    {
+      "title": "切点变化，公式依然成立",
+      "start": 117.3333333333333
+    }
+  ],
+  "cues": [
+    {
+      "number": 1,
+      "text": "今天我们用柯西不等式证明椭圆的切线。",
+      "start": 3.6,
+      "audio_file": "D:\\2026 Learning\\bilibili\\Manim\\Manim_7_tyqx\\media\\cauchy_tangent\\voiceover\\cue_001.wav",
+      "audio_duration": 3.197,
+      "audio_clips": [
+        {
+          "number": 1,
+          "file": "配音文件\\0001_今天我们用柯西不等式证明椭圆的切线。.mp3",
+          "offset": 0.0,
+          "duration": 3.197
+        }
+      ],
+      "end": 7.066666666666666
+    },
+    {
+      "number": 2,
+      "text": "设椭圆上的已知点为 P(x₀, y₀)。",
+      "start": 7.666666666666666,
+      "audio_file": "D:\\2026 Learning\\bilibili\\Manim\\Manim_7_tyqx\\media\\cauchy_tangent\\voiceover\\cue_002.wav",
+      "audio_duration": 3.847,
+      "audio_clips": [
+        {
+          "number": 2,
+          "file": "配音文件\\0002_设椭圆上的已知点为 P，坐标是 x 零、.mp3",
+          "offset": 0.0,
+          "duration": 3.847
+        }
+      ],
+      "end": 11.766666666666667
+    },
+    {
+      "number": 3,
+      "text": "我们把平方项的一个因子换成切点坐标。",
+      "start": 11.766666666666667,
+      "audio_file": "D:\\2026 Learning\\bilibili\\Manim\\Manim_7_tyqx\\media\\cauchy_tangent\\voiceover\\cue_003.wav",
+      "audio_duration": 3.117,
+      "audio_clips": [
+        {
+          "number": 3,
+          "file": "配音文件\\0003_我们把平方项的一个因子换成切点坐标。.mp3",
+          "offset": 0.0,
+          "duration": 3.117
+        }
+      ],
+      "end": 15.166666666666668
+    },
+    {
+      "number": 4,
+      "text": "代入 P，只能说明直线经过 P。要证明相切，只需要证明直线与椭圆只有一个交点。",
+      "start": 15.166666666666668,
+      "audio_file": "D:\\2026 Learning\\bilibili\\Manim\\Manim_7_tyqx\\media\\cauchy_tangent\\voiceover\\cue_004.wav",
+      "audio_duration": 6.933,
+      "audio_clips": [
+        {
+          "number": 4,
+          "file": "配音文件\\0004_代入 P，只能说明直线经过 P。.mp3",
+          "offset": 0.0,
+          "duration": 2.677
+        },
+        {
+          "number": 5,
+          "file": "配音文件\\0005_要证明相切，只需要证明直线与椭圆只有一个.mp3",
+          "offset": 2.677,
+          "duration": 4.257
+        }
+      ],
+      "end": 22.366666666666667
+    },
+    {
+      "number": 5,
+      "text": "任取 Q(x, y)，把两点的坐标分别除以 a 和 b。",
+      "start": 22.96666666666667,
+      "audio_file": "D:\\2026 Learning\\bilibili\\Manim\\Manim_7_tyqx\\media\\cauchy_tangent\\voiceover\\cue_005.wav",
+      "audio_duration": 6.037,
+      "audio_clips": [
+        {
+          "number": 6,
+          "file": "配音文件\\0006_在椭圆上任取一点 Q，坐标是 x、y，把.mp3",
+          "offset": 0.0,
+          "duration": 6.037
+        }
+      ],
+      "end": 29.26666666666667
+    },
+    {
+      "number": 6,
+      "text": "这样得到两个单位向量 u、v，恰好可以使用柯西不等式。",
+      "start": 29.26666666666667,
+      "audio_file": "D:\\2026 Learning\\bilibili\\Manim\\Manim_7_tyqx\\media\\cauchy_tangent\\voiceover\\cue_006.wav",
+      "audio_duration": 4.747,
+      "audio_clips": [
+        {
+          "number": 7,
+          "file": "配音文件\\0007_这样得到两个单位向量 u 和 v，恰好可.mp3",
+          "offset": 0.0,
+          "duration": 4.747
+        }
+      ],
+      "end": 34.266666666666666
+    },
+    {
+      "number": 7,
+      "text": "由柯西不等式，(u·v)² ≤ ‖u‖²‖v‖²。",
+      "start": 34.266666666666666,
+      "audio_file": "D:\\2026 Learning\\bilibili\\Manim\\Manim_7_tyqx\\media\\cauchy_tangent\\voiceover\\cue_007.wav",
+      "audio_duration": 6.717,
+      "audio_clips": [
+        {
+          "number": 8,
+          "file": "配音文件\\0008_由柯西不等式，向量 u 和向量 v 的内.mp3",
+          "offset": 0.0,
+          "duration": 6.717
+        }
+      ],
+      "end": 41.266666666666666
+    },
+    {
+      "number": 8,
+      "text": "代入归一化后的坐标，右边的两个括号都等于 1。",
+      "start": 41.266666666666666,
+      "audio_file": "D:\\2026 Learning\\bilibili\\Manim\\Manim_7_tyqx\\media\\cauchy_tangent\\voiceover\\cue_008.wav",
+      "audio_duration": 4.077,
+      "audio_clips": [
+        {
+          "number": 9,
+          "file": "配音文件\\0009_代入归一化后的坐标，右边的两个括号都等于.mp3",
+          "offset": 0.0,
+          "duration": 4.077
+        }
+      ],
+      "end": 45.6
+    },
+    {
+      "number": 9,
+      "text": "因此 −1 ≤ F(Q) ≤ 1。我们关心的是上界 1。",
+      "start": 45.6,
+      "audio_file": "D:\\2026 Learning\\bilibili\\Manim\\Manim_7_tyqx\\media\\cauchy_tangent\\voiceover\\cue_009.wav",
+      "audio_duration": 5.673,
+      "audio_clips": [
+        {
+          "number": 10,
+          "file": "配音文件\\0010_因此，F 在 Q 点的值介于负一和一之间.mp3",
+          "offset": 0.0,
+          "duration": 3.467
+        },
+        {
+          "number": 11,
+          "file": "配音文件\\0011_我们关心的是它的上界一。.mp3",
+          "offset": 3.467,
+          "duration": 2.207
+        }
+      ],
+      "end": 51.53333333333334
+    },
+    {
+      "number": 10,
+      "text": "这意味着，椭圆上所有的点，都在候选直线的同一侧，或者在直线上。",
+      "start": 52.13333333333334,
+      "audio_file": "D:\\2026 Learning\\bilibili\\Manim\\Manim_7_tyqx\\media\\cauchy_tangent\\voiceover\\cue_010.wav",
+      "audio_duration": 5.917,
+      "audio_clips": [
+        {
+          "number": 12,
+          "file": "配音文件\\0012_这意味着，椭圆上所有的点，都在候选直线的.mp3",
+          "offset": 0.0,
+          "duration": 5.917
+        }
+      ],
+      "end": 58.333333333333336
+    },
+    {
+      "number": 11,
+      "text": "让 Q 沿椭圆移动，右边实时显示 F(Q) 的值。",
+      "start": 58.333333333333336,
+      "audio_file": "D:\\2026 Learning\\bilibili\\Manim\\Manim_7_tyqx\\media\\cauchy_tangent\\voiceover\\cue_011.wav",
+      "audio_duration": 4.157,
+      "audio_clips": [
+        {
+          "number": 13,
+          "file": "配音文件\\0013_让 Q 沿椭圆移动，右边实时显示 F 在.mp3",
+          "offset": 0.0,
+          "duration": 4.157
+        }
+      ],
+      "end": 62.766666666666666
+    },
+    {
+      "number": 12,
+      "text": "在对径点 −P 处，F(Q) = −1。平方形式也取等号，但它不在候选直线上。",
+      "start": 62.766666666666666,
+      "audio_file": "D:\\2026 Learning\\bilibili\\Manim\\Manim_7_tyqx\\media\\cauchy_tangent\\voiceover\\cue_012.wav",
+      "audio_duration": 7.813,
+      "audio_clips": [
+        {
+          "number": 14,
+          "file": "配音文件\\0014_在 P 的对径点处，F 在 Q 点的值等.mp3",
+          "offset": 0.0,
+          "duration": 3.667
+        },
+        {
+          "number": 15,
+          "file": "配音文件\\0015_平方形式也取等号，但这个点不在候选直线上.mp3",
+          "offset": 3.667,
+          "duration": 4.147
+        }
+      ],
+      "end": 70.83333333333333
+    },
+    {
+      "number": 13,
+      "text": "只有回到 P 时，F(Q) = 1。接下来证明取等点唯一。",
+      "start": 70.83333333333333,
+      "audio_file": "D:\\2026 Learning\\bilibili\\Manim\\Manim_7_tyqx\\media\\cauchy_tangent\\voiceover\\cue_013.wav",
+      "audio_duration": 6.283,
+      "audio_clips": [
+        {
+          "number": 16,
+          "file": "配音文件\\0016_只有回到 P 时，F 在 Q 点的值才等.mp3",
+          "offset": 0.0,
+          "duration": 3.357
+        },
+        {
+          "number": 17,
+          "file": "配音文件\\0017_接下来证明，取等点是唯一的。.mp3",
+          "offset": 3.357,
+          "duration": 2.927
+        }
+      ],
+      "end": 77.36666666666666
+    },
+    {
+      "number": 14,
+      "text": "若 Q 同时在椭圆和候选直线上，则 u·v = 1。",
+      "start": 77.96666666666665,
+      "audio_file": "D:\\2026 Learning\\bilibili\\Manim\\Manim_7_tyqx\\media\\cauchy_tangent\\voiceover\\cue_014.wav",
+      "audio_duration": 5.787,
+      "audio_clips": [
+        {
+          "number": 18,
+          "file": "配音文件\\0018_若 Q 同时在椭圆和候选直线上，那么向量.mp3",
+          "offset": 0.0,
+          "duration": 5.787
+        }
+      ],
+      "end": 84.03333333333332
+    },
+    {
+      "number": 15,
+      "text": "柯西取等时，两向量线性相关，即 u = λv。",
+      "start": 84.03333333333332,
+      "audio_file": "D:\\2026 Learning\\bilibili\\Manim\\Manim_7_tyqx\\media\\cauchy_tangent\\voiceover\\cue_015.wav",
+      "audio_duration": 6.457,
+      "audio_clips": [
+        {
+          "number": 19,
+          "file": "配音文件\\0019_柯西不等式取等时，两向量线性相关，即向量.mp3",
+          "offset": 0.0,
+          "duration": 6.457
+        }
+      ],
+      "end": 90.76666666666665
+    },
+    {
+      "number": 16,
+      "text": "因为 ‖u‖ = ‖v‖ = 1，所以 λ = ±1。",
+      "start": 90.76666666666665,
+      "audio_file": "D:\\2026 Learning\\bilibili\\Manim\\Manim_7_tyqx\\media\\cauchy_tangent\\voiceover\\cue_016.wav",
+      "audio_duration": 4.957,
+      "audio_clips": [
+        {
+          "number": 20,
+          "file": "配音文件\\0020_因为两个向量的长度都等于一，所以拉姆达只.mp3",
+          "offset": 0.0,
+          "duration": 4.957
+        }
+      ],
+      "end": 95.99999999999999
+    },
+    {
+      "number": 17,
+      "text": "但 u·v = 1，所以 λ = 1；λ = −1 对应的是对径点。",
+      "start": 95.99999999999999,
+      "audio_file": "D:\\2026 Learning\\bilibili\\Manim\\Manim_7_tyqx\\media\\cauchy_tangent\\voiceover\\cue_017.wav",
+      "audio_duration": 7.173,
+      "audio_clips": [
+        {
+          "number": 21,
+          "file": "配音文件\\0021_但两个向量的内积等于一，所以拉姆达等于一.mp3",
+          "offset": 0.0,
+          "duration": 3.787
+        },
+        {
+          "number": 22,
+          "file": "配音文件\\0022_拉姆达等于负一时，对应的是对径点。.mp3",
+          "offset": 3.787,
+          "duration": 3.387
+        }
+      ],
+      "end": 103.43333333333331
+    },
+    {
+      "number": 18,
+      "text": "因此 u = v，Q = P。这条直线与椭圆只有一个公共点。",
+      "start": 103.43333333333331,
+      "audio_file": "D:\\2026 Learning\\bilibili\\Manim\\Manim_7_tyqx\\media\\cauchy_tangent\\voiceover\\cue_018.wav",
+      "audio_duration": 6.583,
+      "audio_clips": [
+        {
+          "number": 23,
+          "file": "配音文件\\0023_因此，向量 u 等于向量 v，Q 就是.mp3",
+          "offset": 0.0,
+          "duration": 3.777
+        },
+        {
+          "number": 24,
+          "file": "配音文件\\0024_这条直线与椭圆只有一个公共点。.mp3",
+          "offset": 3.777,
+          "duration": 2.807
+        }
+      ],
+      "end": 110.26666666666665
+    },
+    {
+      "number": 19,
+      "text": "整个椭圆位于直线同侧，并且只在 P 处接触，所以它就是 P 点处的切线。",
+      "start": 110.26666666666665,
+      "audio_file": "D:\\2026 Learning\\bilibili\\Manim\\Manim_7_tyqx\\media\\cauchy_tangent\\voiceover\\cue_019.wav",
+      "audio_duration": 6.197,
+      "audio_clips": [
+        {
+          "number": 25,
+          "file": "配音文件\\0025_整个椭圆位于直线同侧，并且只在 P 处接.mp3",
+          "offset": 0.0,
+          "duration": 6.197
+        }
+      ],
+      "end": 116.7333333333333
+    },
+    {
+      "number": 20,
+      "text": "切点可以沿椭圆移动，切线方程的形式始终不变。",
+      "start": 117.3333333333333,
+      "audio_file": "D:\\2026 Learning\\bilibili\\Manim\\Manim_7_tyqx\\media\\cauchy_tangent\\voiceover\\cue_020.wav",
+      "audio_duration": 4.307,
+      "audio_clips": [
+        {
+          "number": 26,
+          "file": "配音文件\\0026_切点可以沿椭圆移动，切线方程的形式始终不.mp3",
+          "offset": 0.0,
+          "duration": 4.307
+        }
+      ],
+      "end": 121.89999999999996
+    },
+    {
+      "number": 21,
+      "text": "当 P = (a, 0) 时，公式给出竖直切线 x = a。",
+      "start": 121.89999999999996,
+      "audio_file": "D:\\2026 Learning\\bilibili\\Manim\\Manim_7_tyqx\\media\\cauchy_tangent\\voiceover\\cue_021.wav",
+      "audio_duration": 5.767,
+      "audio_clips": [
+        {
+          "number": 27,
+          "file": "配音文件\\0027_当 P 是右端点，坐标为 a、零时，公式.mp3",
+          "offset": 0.0,
+          "duration": 5.767
+        }
+      ],
+      "end": 127.9333333333333
+    },
+    {
+      "number": 22,
+      "text": "当 P = (0, b) 时，得到水平切线 y = b。",
+      "start": 127.9333333333333,
+      "audio_file": "D:\\2026 Learning\\bilibili\\Manim\\Manim_7_tyqx\\media\\cauchy_tangent\\voiceover\\cue_022.wav",
+      "audio_duration": 5.367,
+      "audio_clips": [
+        {
+          "number": 28,
+          "file": "配音文件\\0028_当 P 是上端点，坐标为零、b 时，得到.mp3",
+          "offset": 0.0,
+          "duration": 5.367
+        }
+      ],
+      "end": 133.5666666666666
+    },
+    {
+      "number": 23,
+      "text": "左端点和下端点也一样：分别得到 x = −a、y = −b。",
+      "start": 133.5666666666666,
+      "audio_file": "D:\\2026 Learning\\bilibili\\Manim\\Manim_7_tyqx\\media\\cauchy_tangent\\voiceover\\cue_023.wav",
+      "audio_duration": 5.547,
+      "audio_clips": [
+        {
+          "number": 29,
+          "file": "配音文件\\0029_左端点和下端点也一样，分别得到 x 等于.mp3",
+          "offset": 0.0,
+          "duration": 5.547
+        }
+      ],
+      "end": 139.36666666666662
+    }
+  ]
+}
