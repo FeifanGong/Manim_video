@@ -1,0 +1,167 @@
+\documentclass[UTF8]{ctexart}
+
+\usepackage{amsmath,amssymb}
+\usepackage[a4paper,margin=2.4cm]{geometry}
+
+\title{反比例函数、极坐标与等轴双曲线}
+\author{}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section{从反比例函数到曲线方程}
+
+给定反比例函数
+\[
+  y=\frac{k}{x},\qquad k\ne 0,
+\]
+把分母移到等式左边，可以写成直角坐标方程
+\[
+  xy=k.
+\]
+这条曲线的两条渐近线是
+\[
+  x=0,\qquad y=0,
+\]
+也就是坐标轴本身。两条坐标轴互相垂直，所以从渐近线的角度看，
+这条曲线已经具有等轴双曲线的特征。下面用极坐标和旋转变换把这一点写成标准形式。
+
+\section{化为极坐标方程}
+
+在极坐标中，
+\[
+  x=r\cos\theta,\qquad y=r\sin\theta.
+\]
+代入直角坐标方程 \(xy=k\)，得到
+\[
+  (r\cos\theta)(r\sin\theta)=k.
+\]
+因此
+\[
+  r^2\sin\theta\cos\theta=k.
+\]
+利用二倍角公式
+\[
+  \sin 2\theta=2\sin\theta\cos\theta,
+\]
+可得
+\[
+  \frac{r^2}{2}\sin 2\theta=k,
+\]
+即
+\[
+  r^2\sin 2\theta=2k.
+\]
+如果写成 \(r^2\) 的形式，就是
+\[
+  r^2=\frac{2k}{\sin 2\theta}.
+\]
+这就是反比例函数 \(y=k/x\) 对应的极坐标方程。
+
+\section{旋转极轴}
+
+现在把极轴逆时针旋转 \(45^\circ\)，即旋转角
+\[
+  \alpha=\frac{\pi}{4}.
+\]
+同一个点到原点的距离 \(r\) 不变，只是角度的表示发生变化。若新极坐标角记为
+\[
+  \varphi=\theta-\frac{\pi}{4},
+\]
+则
+\[
+  \theta=\varphi+\frac{\pi}{4}.
+\]
+把它代入极坐标方程
+\[
+  r^2\sin 2\theta=2k,
+\]
+得到
+\[
+  r^2\sin\left(2\varphi+\frac{\pi}{2}\right)=2k.
+\]
+因为
+\[
+  \sin\left(2\varphi+\frac{\pi}{2}\right)=\cos 2\varphi,
+\]
+所以旋转后的方程变为
+\[
+  r^2\cos 2\varphi=2k.
+\]
+
+\section{得到标准等轴双曲线}
+
+在旋转后的坐标系中，记
+\[
+  X=r\cos\varphi,\qquad Y=r\sin\varphi.
+\]
+于是
+\[
+  r^2\cos 2\varphi
+  =r^2(\cos^2\varphi-\sin^2\varphi)
+  =X^2-Y^2.
+\]
+因此旋转后的方程
+\[
+  r^2\cos 2\varphi=2k
+\]
+等价于
+\[
+  X^2-Y^2=2k.
+\]
+
+当 \(k>0\) 时，可以写成
+\[
+  \frac{X^2}{2k}-\frac{Y^2}{2k}=1.
+\]
+它的实半轴和虚半轴相等，均为
+\[
+  \sqrt{2k}.
+\]
+所以它是等轴双曲线。
+
+当 \(k<0\) 时，方程可以写成
+\[
+  Y^2-X^2=-2k,
+\]
+也就是
+\[
+  \frac{Y^2}{-2k}-\frac{X^2}{-2k}=1.
+\]
+此时两条半轴仍然相等，均为
+\[
+  \sqrt{-2k}.
+\]
+所以它仍然是等轴双曲线，只是开口方向与 \(k>0\) 的情形相反。
+
+\section{结论}
+
+反比例函数
+\[
+  y=\frac{k}{x}\qquad (k\ne 0)
+\]
+对应的直角坐标方程是
+\[
+  xy=k.
+\]
+把它化为极坐标方程，得到
+\[
+  r^2\sin 2\theta=2k.
+\]
+再将极轴旋转 \(45^\circ\)，令
+\[
+  \varphi=\theta-\frac{\pi}{4},
+\]
+方程变为
+\[
+  r^2\cos 2\varphi=2k.
+\]
+回到旋转后的直角坐标系，就得到
+\[
+  X^2-Y^2=2k.
+\]
+这正是实半轴和虚半轴相等的标准双曲线形式，因此反比例函数的图像本质上是一条等轴双曲线。
+
+\end{document}
